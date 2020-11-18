@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile</title>
+
+    <link href="CSS/style.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans&family=Oswald:wght@500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+    <script>
+  		var firebaseConfig = {
+			apiKey: "AIzaSyDcI-dH0lele9YJMbXlBRfMDxx8QPGeY3A",
+  			authDomain: "twitter-fake-73d39.firebaseapp.com",
+			databaseURL: "https://twitter-fake-73d39.firebaseio.com",
+			projectId: "twitter-fake-73d39",
+			storageBucket: "twitter-fake-73d39.appspot.com",
+			messagingSenderId: "473877653448",
+			appId: "1:473877653448:web:475ea1b362853a51d002fd",
+			measurementId: "G-VY0E3PDBCH"
+		};
+		firebase.initializeApp(firebaseConfig);
+	</script>
+</head>
+<body>
+    <div id="container">
+		<h1 class="TCreate1">PROFILE SETTINGS</h1>
+		<hr>
+		<div id="back">
+		 	<a href="index.html"><h4><img src="img/back2.svg" class="icon"> Back</h4></a>
+		</div>
+		<div id="login">
+       		<h3 class="subtitle">• Login:</h3>
+       		<div class="col c50">
+       			<p class="acc">E-mail:</p>
+       			<input type="text" id="login-email" placeholder="Email">
+       		</div>
+       		<div class="col c50">
+       			<p class="acc">Password:</p>
+       			<input type="password" id="login-password" placeholder="Password">
+       		</div>
+        	<div class="col c50">
+        		<button id="login-button">Login</button>
+        		<p id="login-message"></p>
+        	</div>
+        	<div class="col c50">
+        		<p class="acc">Don't have an account? <a href="create.html">Click Here</a></p>
+        	</div>
+        </div>
+        
+        <div id="user-info">
+        	<div class="col c100">
+        		<h3 class="subtitle">• Profile</h3>
+				<h3 class="subtitle"><div id ="user-name"></div></h3>
+        	</div>
+        	<div class="col c50">
+				<button id="logout-button">Log Out</button>
+        	</div>
+        </div>
+
+        <div id="profile">
+            <div class="col c100">
+            	<h3>• Options</h3>
+            </div>
+            <div class="col c50">
+            	<img id="profile-image" src="img/default.png">
+            </div>
+            <div class="col c50">
+            	<p class="acc">Change Username</p>
+              	<input id="profile-display-name" placeholder="Username">
+            	<p class="acc">Add a Bio</p>
+            	<textarea id="profile-bio" placeholder="Type here"></textarea>
+            	<button id="update-profile">Update Profile</button>
+            </div>
+            
+            <div class="col c100">
+            	<h5>Profile Image</h5>
+                <input id="profile-image-file" type="file" name="profile-img" accept="image/gif, image/jpeg, image/png">
+                <button id="submit-image">Upload</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="JS/helpers.js"></script>
+    <script src="JS/auth.js"></script>
+    <script src="JS/profile.js"></script>
+
+</body>
+</html>

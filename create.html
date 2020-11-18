@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+
+    <link href="CSS/style.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans&family=Oswald:wght@500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+    <script>
+  		var firebaseConfig = {
+			apiKey: "AIzaSyDcI-dH0lele9YJMbXlBRfMDxx8QPGeY3A",
+  			authDomain: "twitter-fake-73d39.firebaseapp.com",
+			databaseURL: "https://twitter-fake-73d39.firebaseio.com",
+			projectId: "twitter-fake-73d39",
+			storageBucket: "twitter-fake-73d39.appspot.com",
+			messagingSenderId: "473877653448",
+			appId: "1:473877653448:web:475ea1b362853a51d002fd",
+			measurementId: "G-VY0E3PDBCH"
+		};
+		firebase.initializeApp(firebaseConfig);
+	</script>
+</head>
+<body>
+   <header>
+   		 <h1 class="TCreate1">SIGN UP</h1>
+   </header>
+   
+    <div id="sign">
+        <div id="sign-up" class="col c50">
+        	<p>Username:</p>
+        	<input type="text" id="sign-up-username" placeholder="Username">
+        	<p>E-mail:</p>
+        	<input type="text" id="sign-up-email" placeholder="Email">
+        	<p>Password:</p>
+        	<input type="password" id="sign-up-password" placeholder="Password">
+        	<br><br><br>
+        	<button id="sign-up-button">Sign Up</button>
+        	<p class="acc">Already sign? <a href="index.html">Click Here</a></p>
+		</div>
+    </div>
+   
+    <script src="JS/helpers.js"></script>
+    <script src="JS/create.js"></script>
+</body>
+</html>

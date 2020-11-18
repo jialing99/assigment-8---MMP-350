@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fake Twitter</title>
+	<link href="CSS/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans&family=Oswald:wght@500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+
+    <script>
+  		var firebaseConfig = {
+			apiKey: "AIzaSyDcI-dH0lele9YJMbXlBRfMDxx8QPGeY3A",
+  			authDomain: "twitter-fake-73d39.firebaseapp.com",
+			databaseURL: "https://twitter-fake-73d39.firebaseio.com",
+			projectId: "twitter-fake-73d39",
+			storageBucket: "twitter-fake-73d39.appspot.com",
+			messagingSenderId: "473877653448",
+			appId: "1:473877653448:web:475ea1b362853a51d002fd",
+			measurementId: "G-VY0E3PDBCH"
+		};
+		firebase.initializeApp(firebaseConfig);
+	</script>
+
+</head>
+<body>
+	<header>
+		<div id="heading">
+			<h1>FAKE TWITTER</h1>
+		</div>
+	</header>
+			
+	<div id="container">
+      	<div id="login">
+      		<h3 class="subtitle">• Login</h3>
+       		<div class="col c50">
+       			<p class="acc">E-mail</p>
+        		<input type="text" id="login-email" placeholder="Email">
+       		</div>
+       		<div class="col c50">
+       			<p class="acc">Password</p>
+        		<input type="password" id="login-password" placeholder="Password">
+       		</div>
+        	<div class="col c50">
+        		<button id="login-button">Login</button>
+        	</div>
+        	<div class="col c50">
+        		<p class="acc">Don't have an account? <a href="create.html">Click Here</a></p>
+        	</div>
+        	<div class="col c100">
+        		<p id="login-message" class="acc"></p>
+        	</div>
+        </div>
+
+        <div id="user-info">
+        	<div class="col c100">
+        		<h3 class="subtitle">• Profile</h3>
+        		<h3 class="subtitle"><div id ="user-name"></div></h3>
+        	</div>
+        	<div class="col c50">
+        		<button id="logout-button">Log Out</button>
+        	</div>
+        	<div class="col c50">
+				<a id="edit-profile-link" href="profile.html"><button>Edit My Profile</button></a>
+        	</div>        	
+        </div>
+        
+		<div id="body">
+		<hr>
+			<div id="write-post" class="col c50">
+				<div>
+					<h3 class="subtitle">• Typing Area</h3>
+					<p class="acc">Message</p>
+					<textarea id="post-body" placeholder="What's on your mind?"></textarea></div>
+				<div>
+					<button id="submit-post">Enter</button>
+				</div>
+			</div>
+			<div class="col c50">
+				<h3 class="subtitle">• Timeline</h3>
+				<br><br>
+				<div id="timeline">
+					<div id="posts">
+						<div class="post"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="JS/helpers.js"></script>
+	<script src="Js/publish.js"></script>
+	<script src="JS/auth.js"></script>
+	<script src="JS/displayPosts.js"></script>
+
+	<script>
+		fb.loadPosts();
+	</script>
+</body>
+</html>
